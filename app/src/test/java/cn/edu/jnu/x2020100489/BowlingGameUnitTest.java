@@ -21,5 +21,17 @@ public class BowlingGameUnitTest {
         }
         assertEquals(30,g.score());
     }
+    @Test
+    public void AFrame(){
+        BowlingGame g=new BowlingGame();
+        for (int i=0;i<16;i++){
+            g.roll(0);
+        }
+        g.roll(3);
+        g.roll(1);
+        g.roll(0);
+        g.roll(0);
+        assertEquals(4,g.score());
+    }
 
 }
