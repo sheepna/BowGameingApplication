@@ -51,7 +51,17 @@ public class BowlingGameUnitTest {
         rollMany(4,2);
         assertEquals(78,g.score());
     }
-
+    @Test
+    public void TenthFrame(){
+        rollMany(12,4);
+        g.roll(5);
+        g.roll(5);
+        rollMany(4,4);
+        g.roll(10);
+        g.roll(4);
+        g.roll(5);
+        assertEquals(97,g.score());
+    }
     private void rollMany(int x, int pin) {
         for (int i = 0; i< x; i++){
             g.roll(pin);
