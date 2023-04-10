@@ -9,9 +9,17 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
+public class BowlingGameUnitTest {
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    public void FirstTest() {
+        BowlingGame g=new BowlingGame();
+        for(int i=0;i<10;i++){
+            g.roll(3);
+        }
+        for(int i=0;i<(20-10);i++){
+            g.roll(0);
+        }
+        assertEquals(30,g.score());
     }
+
 }
