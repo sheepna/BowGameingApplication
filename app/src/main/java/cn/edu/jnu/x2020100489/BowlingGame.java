@@ -14,6 +14,9 @@ public class BowlingGame {
         for (int rollIndex=0;rollIndex<everyRollPin.length;rollIndex++){
             score+=everyRollPin[rollIndex];
             if(rollIndex<19){
+                if(10==everyRollPin[rollIndex]){
+                    score+=everyRollPin[rollIndex+1]+everyRollPin[rollIndex+2];
+                }
                 if(10==everyRollPin[rollIndex]+everyRollPin[rollIndex+1]){
                     score+=everyRollPin[rollIndex+2];
                 }
