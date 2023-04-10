@@ -42,7 +42,15 @@ public class BowlingGameUnitTest {
         rollMany(8,3);
         assertEquals(77,g.score());
     }
-
+    @Test
+    public void AStrike(){
+        rollMany(12,3);
+        g.roll(1);
+        g.roll(9);
+        g.roll(10);
+        rollMany(4,2);
+        assertEquals(78,g.score());
+    }
 
     private void rollMany(int x, int pin) {
         for (int i = 0; i< x; i++){
